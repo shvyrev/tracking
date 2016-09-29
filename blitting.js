@@ -1,9 +1,14 @@
 /**
  * Created by Sergey on 26.09.16.
  */
-(function (global, event) {
+(function blittingCreative(global, event) {
     // global.onResize = onResize();
     var context = global.blittingContext;
+    
+    if(!context){
+        setTimeout(blittingCreative, 150);
+        return;
+    }
 
     var sound = {
         player : null,
